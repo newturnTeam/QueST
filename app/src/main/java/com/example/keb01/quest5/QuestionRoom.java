@@ -13,7 +13,7 @@ public class QuestionRoom extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_room);
-        //액션바 가리기
+        //액션바 리네임
         getSupportActionBar().setTitle("프로젝트1 질문방");
         //좌석표로 화면전환
         Button button2 = (Button) findViewById(R.id.GoSeatView);
