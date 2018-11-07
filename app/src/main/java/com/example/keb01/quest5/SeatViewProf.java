@@ -17,6 +17,7 @@ public class SeatViewProf extends AppCompatActivity {
         //질문방으로 화면전환
         Button button = (Button) findViewById(R.id.questionroom);
         button.setOnClickListener(new View.OnClickListener() {
+            //코드전달안됨 고치셈
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),QuestionRoomProf.class);
