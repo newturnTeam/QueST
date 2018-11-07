@@ -18,12 +18,12 @@
             android:layout_height="match_parent"
             android:layout_gravity="top"
             android:layout_weight="1"
-            android:fontFamily="@font/binggrae"
+            android:fontFamily="@font/binggrae_bold"
             android:gravity="center_horizontal"
             android:includeFontPadding="false"
             android:text="팀 프로젝트 1"
             android:textAllCaps="false"
-            android:textColor="#FF2DA89A"
+            android:textColor="@color/ProjectLightGreen"
             android:textSize="30sp" />
 
     </LinearLayout>
@@ -449,11 +449,10 @@
 
                 <Button
                     android:id="@+id/questionroom"
-                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:background="#2da89a"
+                    android:background="@drawable/btn_question"
                     android:fontFamily="@font/binggrae"
                     android:text="질문방 입장하기" />
             </LinearLayout>
