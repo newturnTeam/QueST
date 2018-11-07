@@ -1,6 +1,7 @@
 package com.example.keb01.quest5;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.nfc.Tag;
 import android.os.SystemClock;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class SeatView extends AppCompatActivity {
@@ -22,9 +24,18 @@ public class SeatView extends AppCompatActivity {
 
         //액션바 가리기
         getSupportActionBar().hide();
-
+        //질문방으로 화면전환
+        Button button = (Button) findViewById(R.id.questionroom);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),QuestionRoom.class);
+                startActivityForResult(intent,101);
+            }
+        });
     }
 
+    //ImageView imageView = (Imageview)findViewById(R.id.all)
     public void onClickButton1(View v) {
         switch (v.getId()) {
             case R.id.좌석1:
@@ -34,10 +45,12 @@ public class SeatView extends AppCompatActivity {
                         .setPositiveButton("예", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+                                
                                 Toast.makeText(SeatView.this, "1번 자리 앉기에 성공하였습니다.", Toast.LENGTH_SHORT).show();
-                                //다이얼로그 화면 사라짐
-                                getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.nfc_image));
+
+                                //nfc 태그기능 추가 전 임시 sleep
                                 SystemClock.sleep(1000);
+                                //다이얼로그 화면 사라짐
                                 dialog.dismiss();
                             }
                         })
