@@ -16,8 +16,8 @@ public class SeatView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seatviewtableforstu);
 
-        //액션바 가리기
-        getSupportActionBar().hide();
+        //액션바 리네임
+        getSupportActionBar().setTitle("팀 프로젝트1");
         //질문방으로 화면전환
         Button button = (Button) findViewById(R.id.questionroom);
         button.setOnClickListener(new View.OnClickListener() {
